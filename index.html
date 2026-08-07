@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolás Gutiérrez - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffa500;
+            --dark: #1a1a2e;
+            --light: #fff5f0;
+            --border: #ffe0cc;
+            --glow: #ff6b35;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Gato animado */
+        .animated-cat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            z-index: 100;
+            animation: catWalk 8s infinite linear;
+        }
+
+        @keyframes catWalk {
+            0% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(100px) translateY(-20px); }
+            50% { transform: translateX(0) translateY(-40px); }
+            75% { transform: translateX(-100px) translateY(-20px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+        .cat {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2);
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            color: var(--light);
+            font-size: 0.95rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            animation: slideUp 0.6s ease 0.1s both;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: 2px solid var(--primary);
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            color: white;
+            border-color: #ffa500;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 8px;
+            height: 40px;
+            background: linear-gradient(180deg, #ff6b35, #ffa500);
+            border-radius: 4px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 107, 53, 0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            background: rgba(255, 107, 53, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+            transform: translateX(8px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            opacity: 0.9;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .card-description {
+            color: var(--light);
+            margin-top: 12px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .card-description ul {
+            margin: 12px 0 0 20px;
+            list-style: none;
+        }
+
+        .card-description li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .card-description li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Resumen */
+        .resumen {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            border-left: 4px solid var(--primary);
+            line-height: 1.9;
+            color: var(--light);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+        }
+
+        /* Skills */
+        .skills-group {
+            margin-bottom: 30px;
+        }
+
+        .skills-group-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            padding: 15px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 107, 53, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .skill-name {
+            color: var(--light);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .skill-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 165, 0, 0.4);
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .dot.filled {
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            box-shadow: 0 0 8px rgba(255, 107, 53, 0.8);
+        }
+
+        /* Publications */
+        .publication {
+            background: rgba(255, 107, 53, 0.08);
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-left: 4px solid var(--primary);
+            backdrop-filter: blur(10px);
+        }
+
+        .publication-title {
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .publication-info {
+            font-size: 0.9rem;
+            color: var(--light);
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .doi-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .doi-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 107, 53, 0.3);
+            text-align: center;
+            color: var(--light);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px 15px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
+            .nav {
+                gap: 8px;
+            }
+
+            .nav-btn {
+                padding: 8px 16px;
+                font-size: 0.75rem;
+            }
+
+            .animated-cat {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media print {
+            .nav, .footer, .animated-cat {
+                display: none;
+            }
+            .section {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Gato Animado -->
+    <div class="animated-cat">
+        <svg class="cat" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cuerpo -->
+            <ellipse cx="50" cy="55" rx="28" ry="25" fill="#ff9d4a" stroke="#ff6b35" stroke-width="2"/>
+
+            <!-- Cabeza -->
+            <circle cx="50" cy="30" r="20" fill="#ff9d4a" stroke="#ff6b35" stroke-width="2"/>
+
+            <!-- Orejas -->
+            <polygon points="35,12 32,0 40,8" fill="#ff9d4a" stroke="#ff6b35" stroke-width="1.5"/>
+            <polygon points="65,12 68,0 60,8" fill="#ff9d4a" stroke="#ff6b35" stroke-width="1.5"/>
+
+            <!-- Ojos -->
+            <circle cx="45" cy="27" r="3" fill="#1a1a2e"/>
+            <circle cx="55" cy="27" r="3" fill="#1a1a2e"/>
+
+            <!-- Nariz -->
+            <circle cx="50" cy="33" r="2" fill="#ff6b35"/>
+
+            <!-- Boca -->
+            <path d="M 50 33 Q 48 35 46 34" stroke="#ff6b35" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M 50 33 Q 52 35 54 34" stroke="#ff6b35" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+            <!-- Cola ondulante -->
+            <path d="M 70 65 Q 85 60 82 45" stroke="#ff9d4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+            <!-- Patas -->
+            <rect x="38" y="75" width="6" height="15" rx="3" fill="#ff9d4a" stroke="#ff6b35" stroke-width="1.5"/>
+            <rect x="56" y="75" width="6" height="15" rx="3" fill="#ff9d4a" stroke="#ff6b35" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">Nicolás Gutiérrez</h1>
+            <div class="contact-info">
+                <div class="contact-item">📍 Lima, Perú</div>
+                <div class="contact-item">📱 +51 970 194 710</div>
+                <div class="contact-item">✉️ ngutierrezs@pucp.edu.pe</div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <button class="nav-btn active" onclick="showSection('resumen')">Resumen</button>
+            <button class="nav-btn" onclick="showSection('formacion')">Formación</button>
+            <button class="nav-btn" onclick="showSection('experiencia')">Experiencia</button>
+            <button class="nav-btn" onclick="showSection('publicaciones')">Publicaciones</button>
+            <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+            <button class="nav-btn" onclick="showSection('referencias')">Referencias</button>
+        </div>
+
+        <!-- Resumen -->
+        <div class="section active" id="resumen">
+            <h2 class="section-title">Resumen Ejecutivo</h2>
+            <div class="resumen">
+                <p>Estudiante de Ciencia Política y Gobierno (PUCP), ubicado en el décimo superior de la Facultad de Ciencias Sociales. Formación sólida en métodos cuantitativos y análisis estadístico con R, Python y herramientas de IA y Machine Learning aplicados a investigación social y política.</p>
+                <p style="margin-top: 15px;">Experiencia en visualización de datos y análisis geoespacial mediante Google Data Studio y QGIS. Intereses académicos centrados en opinión pública, comportamiento electoral y evaluación de políticas públicas, con enfoque en análisis basado en evidencia.</p>
+            </div>
+        </div>
+
+        <!-- Formación -->
+        <div class="section" id="formacion">
+            <h2 class="section-title">Formación Académica</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Ciencia Política y Gobierno</div>
+                        <div class="card-subtitle">Pontificia Universidad Católica del Perú</div>
+                    </div>
+                    <div class="card-date">2026</div>
+                </div>
+                <div class="card-description">
+                    <strong>Ubicado en el 8.1% de rendimiento académico (décimo superior)</strong><br>
+                    Mención en Política Comparada
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">IA Generativa Aplicada a Ciencias Sociales</div>
+                        <div class="card-subtitle">QLAB - Programa de Especialización</div>
+                    </div>
+                    <div class="card-date">Mar 2026 - Jul 2026</div>
+                </div>
+                <div class="card-description">
+                    Beca parcial. Especialización en aplicación de IA generativa para investigación social.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Summer School 2025</div>
+                        <div class="card-subtitle">QLAB</div>
+                    </div>
+                    <div class="card-date">Ene 2025 - Feb 2025</div>
+                </div>
+                <div class="card-description">
+                    Beca completa
+                </div>
+            </div>
+        </div>
+
+        <!-- Experiencia -->
+        <div class="section" id="experiencia">
+            <!-- Experiencia Profesional -->
+            <h2 class="section-title">Experiencia Profesional</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Practicante - Área de Investigación e Incidencia</div>
+                        <div class="card-subtitle">Escuela de Gobierno y Políticas Públicas - PUCP</div>
+                    </div>
+                    <div class="card-date">Ago 2024 - Presente</div>
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li>Elaboración de informes sobre temas coyunturales y efemérides nacionales e internacionales</li>
+                        <li>Recopilación, sistematización y actualización de información en bases de datos</li>
+                        <li>Creación y mantenimiento de bases de datos (Planes de Gobierno, Congreso, Estados de Emergencia)</li>
+                        <li>Apoyo logístico en eventos académicos y públicos</li>
+                        <li>Google Suite, Microsoft 365, RStudio, Python, QGIS, herramientas de IA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Asistente de Investigación</div>
+                        <div class="card-subtitle">Trabajo para Maestría en Gobierno y Políticas Públicas (Rojas & Mori, 2023)</div>
+                    </div>
+                    <div class="card-date">Ene 2024 - Mar 2024</div>
+                </div>
+                <div class="card-description">
+                    <ul>
+                        <li>Revisión y sistematización de literatura</li>
+                        <li>Corrección de estilo, ortografía y citado (APA)</li>
+                        <li>Elaboración de gráficos, tablas y diagramas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Voluntariados -->
+            <h2 class="section-title" style="margin-top: 40px;">Voluntariados y Grupos de Investigación</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Investigador Voluntario</div>
+                        <div class="card-subtitle">Behavioral Impact Center</div>
+                    </div>
+                    <div class="card-date">Nov 2025 - May 2026</div>
+                </div>
+                <div class="card-description">
+                    Investigación y redacción en ciencias del comportamiento, comportamiento electoral y análisis de impacto corporativo.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Voluntario - Mejora de Servicio Público</div>
+                        <div class="card-subtitle">Reinventado.pe</div>
+                    </div>
+                    <div class="card-date">Ene 2023 - Mar 2023</div>
+                </div>
+                <div class="card-description">
+                    Miembro del equipo ganador. Elaboración de policy brief para la Municipalidad Provincial de Grau.
+                </div>
+            </div>
+        </div>
+
+        <!-- Publicaciones -->
+        <div class="section" id="publicaciones">
+            <h2 class="section-title">Publicaciones</h2>
+
+            <div class="publication">
+                <div class="publication-title">"Cambios y continuidades: Perú en la Encuesta Mundial de Valores (1996 - 2025)"</div>
+                <div class="publication-info">
+                    <strong>Autores:</strong> Aragón, Cruz, Alcántara & Gutiérrez (2026)<br>
+                    <strong>Publicado en:</strong> Escuela de Gobierno y Políticas Públicas - PUCP<br>
+                    <strong>ISBN:</strong> 978-612-47713-5-4
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">"Copiar y Pegar": La transferencia de políticas y su influencia en la implementación de políticas de Vigilancia Electrónica para personas privadas de libertad en Perú y Colombia</div>
+                <div class="publication-info">
+                    <strong>Autores:</strong> Espinoza, Gutiérrez & Mena (2024)<br>
+                    <strong>Publicado en:</strong> Politai Vol. 15 Núm. 25<br>
+                    <strong>DOI:</strong> <a href="https://doi.org/10.18800/politai.202402.004" class="doi-link" target="_blank">https://doi.org/10.18800/politai.202402.004</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section" id="skills">
+            <h2 class="section-title">Habilidades y Competencias</h2>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Análisis de Datos</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">R</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Estadística</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">QGIS</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Machine Learning</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Visualización y Herramientas</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Google Data Studio</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Google Suite</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Microsoft 365</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">RStudio</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">IA Generativa</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Temáticas Académicas</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Opinión Pública</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Comportamiento Electoral</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Políticas Públicas</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Política Comparada</div>
+                        <div class="skill-dots">
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot filled"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referencias -->
+        <div class="section" id="referencias">
+            <h2 class="section-title">Referencias Personales</h2>
+
+            <div class="card">
+                <div class="card-title">Dr. Jorge Aragón Trelles</div>
+                <div class="card-description">
+                    Pontificia Universidad Católica del Perú<br>
+                    📞 +51 01 626 2000 (2699)<br>
+                    ✉️ <a href="mailto:jaragon@pucp.pe" style="color: var(--accent); text-decoration: none; font-weight: 600;">jaragon@pucp.pe</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Mg. Marylia Cruz Sarmiento</div>
+                <div class="card-description">
+                    Pontificia Universidad Católica del Perú<br>
+                    📞 +51 01 626 2000 (2699)<br>
+                    ✉️ <a href="mailto:marylia.cruz@pucp.edu.pe" style="color: var(--accent); text-decoration: none; font-weight: 600;">marylia.cruz@pucp.edu.pe</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Lic. Gelin Espinoza Prado</div>
+                <div class="card-description">
+                    📞 +51 968 886 328<br>
+                    ✉️ <a href="mailto:espinoza.g@pucp.edu.pe" style="color: var(--accent); text-decoration: none; font-weight: 600;">espinoza.g@pucp.edu.pe</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Cnel. Ricardo Walter Rojas Rojas</div>
+                <div class="card-description">
+                    📞 +51 987 825 799
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Nicolás Gutiérrez. Disponible para descargar como PDF desde el navegador.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
