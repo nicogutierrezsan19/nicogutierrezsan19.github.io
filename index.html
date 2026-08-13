@@ -73,7 +73,7 @@
         background: color-mix(in srgb, var(--paper) 88%, transparent);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--line);
-        display: flex; align-items: center; justify-content: space-between;
+        display: flex; align-items: center; justify-content: flex-end;
         padding: 16px 40px;
         box-shadow: 0 8px 20px -12px rgba(0,0,0,0);
         transition: box-shadow .3s ease;
@@ -83,14 +83,6 @@
     .progress-bar {
         position: fixed; top: 0; left: 0; z-index: 40; height: 2px; width: 0%;
         background: var(--accent); transition: width .1s linear;
-    }
-    .mark {
-        display: flex; align-items: center; gap: 10px;
-        font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 1.5px;
-        color: var(--muted); text-transform: uppercase;
-    }
-    .mark .sq {
-        width: 8px; height: 8px; background: var(--accent);
     }
     .topnav { display: flex; align-items: center; gap: 26px; }
     .topnav a {
@@ -272,7 +264,6 @@
 <body>
     <div class="progress-bar" id="progressBar"></div>
     <div class="topbar" id="topbar">
-        <div class="mark"><span class="sq"></span>NG · Lima, PE</div>
         <nav class="topnav">
             <a href="#resumen">Resumen</a>
             <a href="#formacion">Formación</a>
