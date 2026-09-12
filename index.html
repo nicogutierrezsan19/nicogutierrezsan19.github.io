@@ -194,11 +194,19 @@
 
     /* Publications */
     .publication {
+        display: flex; gap: 18px; align-items: flex-start;
         padding: 18px 0 18px 14px; margin-left: -14px; border-top: 1px solid var(--line);
         border-left: 2px solid transparent;
         transition: background .25s ease, border-left-color .25s ease, transform .25s ease;
     }
     .publication:hover { background: var(--paper-raised); border-left-color: var(--accent); transform: translateX(4px); }
+    .pub-thumb {
+        width: 58px; height: 82px; object-fit: cover; flex-shrink: 0;
+        border: 1px solid var(--line); background: var(--paper-raised);
+        transition: border-color .25s ease;
+    }
+    .publication:hover .pub-thumb { border-color: var(--accent); }
+    .pub-body { flex: 1; min-width: 0; }
     .publication-title { font-family: var(--font-display); font-style: italic; font-weight: 600; color: var(--ink); font-size: 1.04rem; margin-bottom: 10px; }
     .pub-line { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 4px; }
     .pub-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-2); margin-right: 8px; }
@@ -389,16 +397,26 @@
         <section id="publicaciones" class="reveal">
             <div class="section-head"><span class="section-mark">#3</span><h2 class="section-name">Publicaciones</h2></div>
             <div class="publication">
-                <div class="publication-title">"Cambios y continuidades: Perú en la Encuesta Mundial de Valores (1996–2025)"</div>
-                <div class="pub-line"><span class="pub-label">Autores</span>Aragón, Cruz, Alcántara &amp; Gutiérrez (2026)</div>
-                <div class="pub-line"><span class="pub-label">Publicado en</span>Escuela de Gobierno y Políticas Públicas - PUCP</div>
-                <div class="pub-line mono"><span class="pub-label">ISBN</span>978-612-47713-5-4</div>
+                <a href="https://gobierno.pucp.edu.pe/wp-content/uploads/2026/03/encuesta-mundial-de-valores-peru-2025.pdf" target="_blank">
+                    <img class="pub-thumb" src="img/pub-evs.jpg" alt="Carátula: Cambios y continuidades: Perú en la Encuesta Mundial de Valores" loading="lazy">
+                </a>
+                <div class="pub-body">
+                    <div class="publication-title">"Cambios y continuidades: Perú en la Encuesta Mundial de Valores (1996–2025)"</div>
+                    <div class="pub-line"><span class="pub-label">Autores</span>Aragón, Cruz, Alcántara &amp; Gutiérrez (2026)</div>
+                    <div class="pub-line"><span class="pub-label">Publicado en</span>Escuela de Gobierno y Políticas Públicas - PUCP</div>
+                    <div class="pub-line mono"><span class="pub-label">ISBN</span>978-612-47713-5-4</div>
+                </div>
             </div>
             <div class="publication">
-                <div class="publication-title">"Copiar y Pegar": La transferencia de políticas y su influencia en la implementación de políticas de Vigilancia Electrónica para personas privadas de libertad en Perú y Colombia</div>
-                <div class="pub-line"><span class="pub-label">Autores</span>Espinoza, Gutiérrez &amp; Mena (2024)</div>
-                <div class="pub-line"><span class="pub-label">Publicado en</span>Politai Vol. 15 Núm. 25</div>
-                <div class="pub-line mono"><span class="pub-label">DOI</span><a href="https://doi.org/10.18800/politai.202402.004" target="_blank">10.18800/politai.202402.004</a></div>
+                <a href="https://revistas.pucp.edu.pe/index.php/politai/article/view/30067/26981" target="_blank">
+                    <img class="pub-thumb" src="img/pub-politai.jpg" alt="Carátula: Copiar y Pegar, Politai Vol. 15 Núm. 25" loading="lazy">
+                </a>
+                <div class="pub-body">
+                    <div class="publication-title">"Copiar y Pegar": La transferencia de políticas y su influencia en la implementación de políticas de Vigilancia Electrónica para personas privadas de libertad en Perú y Colombia</div>
+                    <div class="pub-line"><span class="pub-label">Autores</span>Espinoza, Gutiérrez &amp; Mena (2024)</div>
+                    <div class="pub-line"><span class="pub-label">Publicado en</span>Politai Vol. 15 Núm. 25</div>
+                    <div class="pub-line mono"><span class="pub-label">DOI</span><a href="https://doi.org/10.18800/politai.202402.004" target="_blank">10.18800/politai.202402.004</a></div>
+                </div>
             </div>
         </section>
 
