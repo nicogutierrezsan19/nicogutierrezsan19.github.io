@@ -124,6 +124,9 @@ Email: jaragon@pucp.pe
 ## Mg. Lina Arenas
 Email: larenas@ed.ac.uk
 
+## PhD(c) Daniel Encinas
+Email: danielencinas2021@u.northwestern.edu
+
 ## Lic. Gelin Espinoza Prado
 Institución: Ministerio de Cultura
 Teléfono: +51 968 886 328
