@@ -28,11 +28,6 @@ Fecha: 2026
 Descripción: Especialización en aplicación de IA generativa para investigación social.
 Etiqueta: Beca parcial
 
-## Summer School 2025
-Institución: QLAB
-Fecha: Ene 2025 – Feb 2025
-Etiqueta: Beca completa
-
 ---
 
 # §3 Experiencia
@@ -47,7 +42,7 @@ Fecha: Ago 2026 – Presente
 - Síntesis y presentación de hallazgos en informes ejecutivos, con foco en conclusiones accionables para clientes y equipos internos
 - Coordinación con áreas de campo, procesamiento y análisis para cumplir plazos y estándares de calidad
 
-### Locador de Servicios - Asistencia en temas de investigación
+### Locador de Servicios - Asistencia en Investigación
 Institución: Jurado Nacional de Elecciones (JNE) - DNEECT, Elecciones Regionales y Municipales 2026
 Fecha: Oct 2026
 - Asistencia en la etapa previa y en la ejecución de mesas de trabajo y talleres de investigación
@@ -127,6 +122,8 @@ Email: jaragon@pucp.pe
 
 ## Mg. Lina Arenas
 Email: larenas@ed.ac.uk
+
+## Daniel Encinas
 
 ## Lic. Gelin Espinoza Prado
 Institución: Ministerio de Cultura
