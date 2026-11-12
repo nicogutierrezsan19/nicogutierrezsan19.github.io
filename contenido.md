@@ -9,7 +9,7 @@ Email: nico.gutierrez.san19@gmail.com
 
 # §1 Resumen
 
-Egresado de Ciencia Política y Gobierno (PUCP), ubicado en el décimo superior de la Facultad de Ciencias Sociales. Research Analyst de Corporate Reputation (IPSOS). Formación sólida en métodos cuantitativos y análisis estadístico con R, Python y herramientas de IA y Machine Learning aplicados a investigación social y política.
+Bachiller en Ciencia Política y Gobierno (PUCP), ubicado en el décimo superior de la Facultad de Ciencias Sociales. Research Analyst de Corporate Reputation (IPSOS). Formación sólida en métodos cuantitativos y análisis estadístico con R, Python y herramientas de IA y Machine Learning aplicados a investigación social y política.
 
 Experiencia en visualización de datos y análisis geoespacial mediante Google Data Studio y QGIS. Intereses académicos centrados en opinión pública, comportamiento electoral y evaluación de políticas públicas, con enfoque en análisis basado en evidencia.
 
@@ -42,7 +42,10 @@ Etiqueta: Beca completa
 ### Research Analyst - Corporate Reputation
 Institución: IPSOS Opinión y Mercado
 Fecha: Ago 2026 – Presente
-(Sin descripción de funciones todavía)
+- Gestión y apoyo de estudios de reputación corporativa en sectores como servicios financieros, minería y telecomunicaciones, desde el diseño hasta la entrega de resultados
+- Desarrollo de herramientas cuantitativas para medir indicadores clave y drivers de reputación, que permiten identificar qué factores explican la percepción entre la opinión pública y líderes de opinión
+- Síntesis y presentación de hallazgos en informes ejecutivos, con foco en conclusiones accionables para clientes y equipos internos
+- Coordinación con áreas de campo, procesamiento y análisis para cumplir plazos y estándares de calidad
 
 ### Practicante — Área de Investigación e Incidencia
 Institución: Escuela de Gobierno y Políticas Públicas — PUCP
