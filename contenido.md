@@ -102,6 +102,9 @@ DOI: 10.18800/politai.202402.004
 
 # §5 Habilidades
 
+## Diseño de encuestas y estudios de opinión
+Diseño de cuestionarios, Estudios de opinión pública, Medición de reputación corporativa, Análisis de drivers, Indicadores clave (KPIs), Evaluación de coyuntura, Investigación cualitativa, Reportes ejecutivos, Coordinación con campo y procesamiento
+
 ## Análisis de datos
 R, Python, Estadística, QGIS, Machine Learning
 
