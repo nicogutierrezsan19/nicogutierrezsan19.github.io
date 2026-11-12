@@ -106,7 +106,7 @@ DOI: 10.18800/politai.202402.004
 Diseño de cuestionarios, Estudios de opinión pública, Medición de reputación corporativa, Análisis de drivers, Indicadores clave (KPIs), Evaluación de coyuntura, Investigación cualitativa, Reportes ejecutivos, Coordinación con campo y procesamiento
 
 ## Análisis de datos
-R, Python, Estadística, QGIS, Machine Learning
+R, Python, SPSS, Estadística, QGIS, Machine Learning
 
 ## Visualización y herramientas
 Looker Studio/Data Studio, Google Suite, Microsoft 365, RStudio, IA Generativa
