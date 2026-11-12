@@ -42,14 +42,12 @@ Fecha: Ago 2026 – Presente
 - Síntesis y presentación de hallazgos en informes ejecutivos, con foco en conclusiones accionables para clientes y equipos internos
 - Coordinación con áreas de campo, procesamiento y análisis para cumplir plazos y estándares de calidad
 
-### Locador de Servicios - Asistencia en Investigación
+### Locador de Servicios - Facilitador
 Institución: Jurado Nacional de Elecciones (JNE) - DNEECT, Elecciones Regionales y Municipales 2026
 Fecha: Oct 2026
-- Asistencia en la etapa previa del estudio Mapa Conductual del Elector Peruano: capacitación a facilitadores de campo, preparación de material y convocatoria de asistentes
-- Moderación de 3 talleres grupales en San Vicente de Cañete (15 asistentes), aplicando la Guía de Recojo de Información, el consentimiento informado y la dinámica del Mapa del Elector
-- Registro de información cualitativa: notas, grabaciones autorizadas, transcripciones de los tres talleres y citas textuales relevantes
-- Sistematización en el formato estandarizado del Mapa del Elector y en una matriz de análisis por categorías conductuales (atención, confianza, influencia social, atajos de decisión, entre otras)
-- Identificación y organización de hallazgos preliminares sobre cómo se informan y deciden su voto los electores, y elaboración del informe de actividades (entregable único)
+- Asistencia en estudio Mapa Conductual del Elector Peruano. Coordinación en campo, preparación de material y convocatoria de asistentes
+- Moderación de tres talleres/grupos focales en San Vicente de Cañete
+- Registro y sistematización de información cualitativa siguiendo lentes analíticos de ciencias del comportamiento
 
 ### Practicante — Área de Investigación e Incidencia
 Institución: Escuela de Gobierno y Políticas Públicas — PUCP
@@ -125,8 +123,6 @@ Email: jaragon@pucp.pe
 
 ## Mg. Lina Arenas
 Email: larenas@ed.ac.uk
-
-## Daniel Encinas
 
 ## Lic. Gelin Espinoza Prado
 Institución: Ministerio de Cultura
