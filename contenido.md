@@ -45,11 +45,11 @@ Fecha: Ago 2026 – Presente
 ### Locador de Servicios - Asistencia en Investigación
 Institución: Jurado Nacional de Elecciones (JNE) - DNEECT, Elecciones Regionales y Municipales 2026
 Fecha: Oct 2026
-- Asistencia en la etapa previa y en la ejecución de mesas de trabajo y talleres de investigación
-- Registro de información cualitativa: notas detalladas, intervenciones y citas textuales relevantes
-- Sistematización de la información mediante matrices y formatos estandarizados para su clasificación, comparación y análisis
-- Identificación y organización de hallazgos preliminares: opiniones, coincidencias, diferencias y percepciones
-- Elaboración de informes de actividades con resultados consolidados y observaciones sobre la dinámica de las mesas
+- Asistencia en la etapa previa del estudio Mapa Conductual del Elector Peruano: capacitación a facilitadores de campo, preparación de material y convocatoria de asistentes
+- Moderación de 3 talleres grupales en San Vicente de Cañete (15 asistentes), aplicando la Guía de Recojo de Información, el consentimiento informado y la dinámica del Mapa del Elector
+- Registro de información cualitativa: notas, grabaciones autorizadas, transcripciones de los tres talleres y citas textuales relevantes
+- Sistematización en el formato estandarizado del Mapa del Elector y en una matriz de análisis por categorías conductuales (atención, confianza, influencia social, atajos de decisión, entre otras)
+- Identificación y organización de hallazgos preliminares sobre cómo se informan y deciden su voto los electores, y elaboración del informe de actividades (entregable único)
 
 ### Practicante — Área de Investigación e Incidencia
 Institución: Escuela de Gobierno y Políticas Públicas — PUCP
@@ -69,7 +69,7 @@ Fecha: Ene 2024 – Mar 2024
 
 ## Voluntariados y grupos de investigación
 
-### Comisionado de Programación
+### Subcoordinador del Área de Desarrollo y Tecnología
 Institución: Observatorio de Proyectos de Ley EntreLíneas
 Fecha: Jul 2026 - Presente
 Descripción: Desarrollo de scripts y pipelines para el monitoreo de la función legislativa de la Cámara de Diputados y la Cámara de Senadores (asistencias, votaciones, proyectos de ley, comisiones, entre otros).
