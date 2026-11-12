@@ -9,9 +9,9 @@ Email: nico.gutierrez.san19@gmail.com
 
 # §1 Resumen
 
-Bachiller en Ciencia Política y Gobierno (PUCP), ubicado en el décimo superior de la Facultad de Ciencias Sociales. Research Analyst de Corporate Reputation (IPSOS). Formación sólida en métodos cuantitativos y análisis estadístico con R, Python y herramientas de IA y Machine Learning aplicados a investigación social y política.
+Politólogo por la PUCP, ubicado en el décimo superior de la Facultad de Ciencias Sociales. Research Analyst de Corporate Reputation (IPSOS). Formación sólida en métodos cuantitativos y análisis estadístico con R, Python y herramientas de IA y Machine Learning aplicados a investigación social y política.
 
-Experiencia en visualización de datos y análisis geoespacial mediante Google Data Studio y QGIS. Intereses académicos centrados en opinión pública, comportamiento electoral y evaluación de políticas públicas, con enfoque en análisis basado en evidencia.
+Experiencia en visualización de datos y análisis geoespacial mediante Looker Studio/Data Studio y QGIS. Intereses académicos centrados en opinión pública, comportamiento electoral y evaluación de políticas públicas, con enfoque en análisis basado en evidencia.
 
 ---
 
@@ -22,7 +22,7 @@ Institución: Pontificia Universidad Católica del Perú
 Fecha: 2026
 Descripción: Ubicado en el décimo superior de rendimiento académico  · Mención en Política Comparada
 
-## IA Generativa Aplicada a Ciencias Sociales
+## IA Generativa Aplicada a Ciencias Sociales y Gestión Pública
 Institución: QLAB — Programa de Especialización
 Fecha: 2026
 Descripción: Especialización en aplicación de IA generativa para investigación social.
@@ -47,6 +47,15 @@ Fecha: Ago 2026 – Presente
 - Síntesis y presentación de hallazgos en informes ejecutivos, con foco en conclusiones accionables para clientes y equipos internos
 - Coordinación con áreas de campo, procesamiento y análisis para cumplir plazos y estándares de calidad
 
+### Locador de Servicios - Asistencia en temas de investigación
+Institución: Jurado Nacional de Elecciones (JNE) - DNEECT, Elecciones Regionales y Municipales 2026
+Fecha: Oct 2026
+- Asistencia en la etapa previa y en la ejecución de mesas de trabajo y talleres de investigación
+- Registro de información cualitativa: notas detalladas, intervenciones y citas textuales relevantes
+- Sistematización de la información mediante matrices y formatos estandarizados para su clasificación, comparación y análisis
+- Identificación y organización de hallazgos preliminares: opiniones, coincidencias, diferencias y percepciones
+- Elaboración de informes de actividades con resultados consolidados y observaciones sobre la dinámica de las mesas
+
 ### Practicante — Área de Investigación e Incidencia
 Institución: Escuela de Gobierno y Políticas Públicas — PUCP
 Fecha: Ago 2024 – Ago 2026
@@ -68,7 +77,7 @@ Fecha: Ene 2024 – Mar 2024
 ### Comisionado de Programación
 Institución: Observatorio de Proyectos de Ley EntreLíneas
 Fecha: Jul 2026 - Presente
-Descripción: Elaboración de scripts y pipelines para el recojo de información de la función legislativa (asistencias, votaciones, proyectos de ley, comisiones, entre otros).
+Descripción: Desarrollo de scripts y pipelines para el monitoreo de la función legislativa de la Cámara de Diputados y la Cámara de Senadores (asistencias, votaciones, proyectos de ley, comisiones, entre otros).
 
 ### Investigador Voluntario
 Institución: Behavioral Impact Center
@@ -102,7 +111,7 @@ DOI: 10.18800/politai.202402.004
 R, Python, Estadística, QGIS, Machine Learning
 
 ## Visualización y herramientas
-Google Data Studio, Google Suite, Microsoft 365, RStudio, IA Generativa
+Looker Studio/Data Studio, Google Suite, Microsoft 365, RStudio, IA Generativa
 
 ## Temáticas académicas
 Opinión Pública, Comportamiento Electoral, Políticas Públicas, Política Comparada
@@ -116,10 +125,8 @@ Institución: Pontificia Universidad Católica del Perú
 Teléfono: +51 01 626 2000 (2699)
 Email: jaragon@pucp.pe
 
-## Mg. Marylia Cruz Sarmiento
-Institución: Pontificia Universidad Católica del Perú
-Teléfono: +51 01 626 2000 (2699)
-Email: marylia.cruz@pucp.edu.pe
+## Mg. Lina Arenas
+Email: larenas@ed.ac.uk
 
 ## Lic. Gelin Espinoza Prado
 Institución: Ministerio de Cultura
